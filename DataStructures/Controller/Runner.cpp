@@ -1,5 +1,5 @@
 //
-//  main.cpp
+//  Runner.cpp
 //  DataStructures
 //
 //  Created by Mills, Jenna on 1/28/19.
@@ -7,9 +7,10 @@
 //
 
 #include <iostream>
+#include "Controller.hpp"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int main()
+{
+    Controller app;
+    app.start();
 }
