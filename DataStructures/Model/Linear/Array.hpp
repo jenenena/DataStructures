@@ -46,4 +46,19 @@ Array<Type> :: Array(int size)
     internalArray = new Type[size];
 }
 
+//copy constructor
+template <class Type>
+Array<Type :: Array(const Array<Type> & toCopy)
+{
+    this->size = toCopy.getSize();
+    //build data structure
+    internalArray = newType[size];
+    for(int index = 0; index < size; index++)
+    {
+        internalArray[index] = toCopy[index];
+    }
+}
+
+
+
 #endif /* Array_hpp */
