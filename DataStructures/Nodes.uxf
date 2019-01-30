@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>70</y>
+      <w>270</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>Node&lt;Type&gt;
+--
+
+- data : Type
+
+--
+
++ Node&lt;Type&gt;(Type) : constructor
++ Node&lt;Type&gt;(): constructor
+
++ getData() : Type
++ setData(Type) : void
+
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>430</y>
+      <w>420</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>LinearNode&lt;Type&gt;
+--
+
+-  next : Node&lt;Type&gt; *
+
+--
++ LinearNode&lt;Type&gt;() : constructor
++ LinearNode&lt;Type&gt;(Type) : constructor
++ LinearNde&lt;Type&gt;(Type, LinearNode&lt;Type&gt;) : constructor
+
++ getNext() : Node&lt;Type&gt; *
++ setNext(Node&lt;Type&gt; *) : void
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>340</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>430</y>
+      <w>310</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Array&lt;Type&gt;
+--
+
+- size : int
+- internalArray : Type *
+
+--
+
++ Array&lt;Type&gt;(Array&lt;Type&gt;) : constructor
++ Array&lt;Type&gt;(int) : constructor
++ getSize() : int
++ setAtIndex(int,Type) : void
++ getFromIndex(int) : Type
++ operator []
++ operator = Array&lt;Type&gt; &amp;
++ ~Array() : destructor
+
+
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
