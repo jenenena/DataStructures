@@ -43,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE819FFC2201F0E90017CE8B /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				BEE8410A21FF610000D56FAE /* Node.hpp */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
 		BEE840EC21FF5B8700D56FAE = {
 			isa = PBXGroup;
 			children = (
@@ -73,7 +81,7 @@
 		BEE840FF21FF5BE400D56FAE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BEE8410A21FF610000D56FAE /* Node.hpp */,
+				BE819FFC2201F0E90017CE8B /* Nodes */,
 			);
 			path = Model;
 			sourceTree = "<group>";
