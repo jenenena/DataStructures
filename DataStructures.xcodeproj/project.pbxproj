@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BEB025C62209DE610047E0D6 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEB025C42209DE610047E0D6 /* Timer.cpp */; };
+		BEB025C92209F0640047E0D6 /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEB025C72209F0640047E0D6 /* FileController.cpp */; };
 		BEE8410721FF5D8400D56FAE /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEE8410521FF5D8400D56FAE /* Controller.cpp */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,8 @@
 		BE81A0002202063B0017CE8B /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 		BEB025C42209DE610047E0D6 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		BEB025C52209DE610047E0D6 /* Timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
+		BEB025C72209F0640047E0D6 /* FileController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileController.cpp; sourceTree = "<group>"; };
+		BEB025C82209F0640047E0D6 /* FileController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileController.hpp; sourceTree = "<group>"; };
 		BEE840F521FF5B8700D56FAE /* DataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructures; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE8410421FF5D1800D56FAE /* NodeUmletDiagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NodeUmletDiagram.png; sourceTree = "<group>"; };
 		BEE8410521FF5D8400D56FAE /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
@@ -122,6 +125,8 @@
 				BEB025C22209DD750047E0D6 /* Tools */,
 				BEE8410521FF5D8400D56FAE /* Controller.cpp */,
 				BEE8410621FF5D8400D56FAE /* Controller.hpp */,
+				BEB025C72209F0640047E0D6 /* FileController.cpp */,
+				BEB025C82209F0640047E0D6 /* FileController.hpp */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			files = (
 				BEE8410721FF5D8400D56FAE /* Controller.cpp in Sources */,
 				BEB025C62209DE610047E0D6 /* Timer.cpp in Sources */,
+				BEB025C92209F0640047E0D6 /* FileController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
