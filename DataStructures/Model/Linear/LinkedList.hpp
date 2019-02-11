@@ -28,10 +28,10 @@ public:
     LinearNode<Type> * getFront();
     LinearNode<Type> * getEnd();
     //structure methods
-    void add(Type item);
-    void addAtIndex(int index, Type item);
-    Type getFromIndex(int index);
-    Type remove(int index);
+    virtual void add(Type item);
+    virtual void addAtIndex(int index, Type item);
+    virtual Type getFromIndex(int index);
+    virtual Type remove(int index);
     //Type setAtIndex(int index, Type item)
     bool contains(Type item);
 };
