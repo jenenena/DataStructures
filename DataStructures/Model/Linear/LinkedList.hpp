@@ -37,10 +37,6 @@ public:
 };
 
 
-
-
-
-
 template <class Type>
 LinkedList<Type> :: LinkedList()
 {
@@ -56,72 +52,19 @@ LinkedList<Type> :: ~LinkedList()
     while (front != nullptr)
     {
         front = destroyStructure->getNextNode();
-        deleteDestroyStructure
+        delete destroyStructure;
+        destroyStructure = front;
     }
-    
-}
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-template <clas
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-template <classType>
+template <class Type>
 Type LinkedList<Type> :: remove (int index)
 {
     assert(index >= 0 && index < this->size);
     
-    LinearNode<Type * current = front;
-    LinearNode<Type * toBeRemoved = nullptr;
-    LinearNode<Type * previous = nullptr;
+    LinearNode<Type> * current = front;
+    LinearNode<Type> * toBeRemoved = nullptr;
+    LinearNode<Type> * previous = nullptr;
     
     Type removedData;
     

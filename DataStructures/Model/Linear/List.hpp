@@ -21,7 +21,7 @@ public:
     virtual void add(Type item) = 0;
     //Virtual means that the method can be overwritten; assigning the method to be zero means
     // that the method is abstract. The method is empty.
-    virtual void addAtIndex(int index; Type item) = 0;
+    virtual void addAtIndex(int index, Type item) = 0;
     virtual Type remove(int index ) = 0;
     virtual Type getFromIndex(int index) = 0;
     //HELPER; methods to ask the list

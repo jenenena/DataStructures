@@ -10,23 +10,26 @@
 #define LinearNode_hpp
 
 #include <assert.h>
+#include "Node.hpp"
 
-template <classType>
-class linearNode : public Node<Type>
+template <class Type>
+class LinearNode : public Node<Type>
 {
 private:
     LinearNode<Type> * next;
 public:
     LinearNode(Type data);
-    LInearNode(Type data, LinearNode<Type> * next);
+    LinearNode(Type data, LinearNode<Type> * next);
     LinearNode<Type> * getNextNode();
     void setNextNode(LinearNode<Type> * next);
 };
 
 //Implementation of templates
-template <class Type>
-LinearNode<Type> :: LinearNode() : Node()
-{}
+//template <class Type>
+//LinearNode<Type> :: LinearNode() : Node()
+//{}
+
+//I am not sure what this one above does... might need to uncomment it later? Good heavens I have no idea what I'm doing
 
 template <class Type>
 LinearNode<Type> :: LinearNode(Type data) : Node<Type>(data)
