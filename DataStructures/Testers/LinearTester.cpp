@@ -17,7 +17,27 @@ void LinearTester :: testVsSTL()
     crimeTimerSTL.stopTimer();
     
     crimeTimerOOP.startTimer();
-    LinkedList<CrimeData> moreCrimes - FileController :: readDataToList("/Users/jmil1416/Desktop/C++Workspace/DataStructures/DataStructures/Data/crime.csv")
+    LinkedList<CrimeData> moreCrimes = FileController :: readDataToList("/Users/jmil1416/Desktop/C++Workspace/DataStructures/DataStructures/Data/crime.csv")
     crimeTimerOOP.stopTimer();
     
+    crimeTimerSTL.displayInformation();
+    crimeTimerOOP.displayInformation();
+    cout << "A difference of: " << crimeTimerOOP.getTimeInMicroseconds() - crimeTimerSTL.getTimeInMicroseconds() << " microseconds" << endl;
+    
+    musicSTL.startTimer();
+    vector<Music> tunez = FileController :: musicDataToVector("/Users/jmil1416/Desktop/C++Workspace/DataStructures/DataStructures/Data/music.csv")
+    musicTimerSTL.stopTimer();
+    
+    musicOOP.startTimer();
+    LinkedList<Music> musicList = FileController :: readDataToList("/Users/jmil1416/Desktop/C++Workspace/DataStructures/DataStructures/Data/music.csv");
+    musicOOP.stopTimer();
+    
+    musicSTL.displayInformation();
+    musicOOP.displayInformation();
+    cout << "A difference of: " << musicOOP.getTimeInMicroseconds() - musicSTL.getTimeInMicroseconds() << " microseconds" << endl;
+    
+    crimeTimerOOP.resetTimer();
+    crimeTimerSTL.resetTimer();
+    musicOOP.resetTimer();
+    musicSTL.resetTimer();
 }
