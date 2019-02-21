@@ -46,7 +46,7 @@
 		BEB025C52209DE610047E0D6 /* Timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
 		BEB025C72209F0640047E0D6 /* FileController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileController.cpp; sourceTree = "<group>"; };
 		BEB025C82209F0640047E0D6 /* FileController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileController.hpp; sourceTree = "<group>"; };
-		BEBBC533221EEFF900356334 /* DoubleNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleNode.h; sourceTree = "<group>"; };
+		BEBBC533221EEFF900356334 /* DoubleNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DoubleNode.hpp; sourceTree = "<group>"; };
 		BEE840F521FF5B8700D56FAE /* DataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructures; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE8410421FF5D1800D56FAE /* NodeUmletDiagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NodeUmletDiagram.png; sourceTree = "<group>"; };
 		BEE8410521FF5D8400D56FAE /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 			children = (
 				BEE8410A21FF610000D56FAE /* Node.hpp */,
 				BE819FFD2201F8D80017CE8B /* LinearNode.hpp */,
-				BEBBC533221EEFF900356334 /* DoubleNode.h */,
+				BEBBC533221EEFF900356334 /* DoubleNode.hpp */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
