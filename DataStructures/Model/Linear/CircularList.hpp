@@ -5,7 +5,6 @@
 //  Created by Mills, Jenna on 2/21/19.
 //  Copyright © 2019 CTEC. All rights reserved.
 //
-
 #include "../Nodes/DoubleNode.hpp"
 
 #ifndef CircularList_hpp
@@ -44,7 +43,7 @@ CircularList<Type> :: CircularList();
 template <class Type>
 CircularList<Type> :: ~CircularList()
 {
-    DoubleNode<Type> 8 current = front;
+    DoubleNode<Type> * current = front;
     while (this->front != nullptr)
     {
         front = front->getNext();
@@ -76,6 +75,24 @@ DoubleNode<Type> * CircularList<Type> :: findNode(int index)
         }
     }
     return nodeToFind;
+}
+
+template <class Type>
+void CircularList<Type> :: add(Type item)
+{
+    DoubleNode<Type> * addedNode;
+    if (this->size == 0)
+    {
+        addedNode = new DoubleNode<Type>(item);
+        this->front = addedNode;
+    }
+    else
+    {
+        addedNode = new DoubleNode<Type>(item, this->end, this->front);
+        this->end->setNext(addedNode);
+    }
+    this->end = addedNode;
+    this->size++;
 }
 
 template <class Type>
