@@ -20,17 +20,24 @@
 #include "../Resources/crimeData.hpp"
 #include "../Resources/Music.hpp"
 
+#include "../Model/Linear/Stack.hpp"
+#include "../Model/Linear/Queue.hpp"
+
 using namespace std;
 
 class FileController
 {
 public:
     static vector<CrimeData> readCrimeDataToVector(string filename);
-    static LinkedList<crimeData> readDataToList(string filename);
+    static LinkedList<CrimeData> readDataToList(string filename);
+    static Stack<CrimeData>readCrimeDataToStack(string filename);
+    static Queue<CrimeData>readCrimeDataToQueue(string filename);
     
     static vector<Music> musicDataToVector(string filename);
     static Array<Music> musicDataToArray(string filename);
     static LinkedList<Music> musicDataToList(string filename);
+    static Stack<Music> musicDataToStack(string filename);
+    static Queue<Music> musicDataToQueue(string filename);
 };
 
 #endif /* FileController_hpp */
