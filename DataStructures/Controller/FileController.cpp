@@ -256,7 +256,7 @@ Stack<Music> FileController :: musicDataToStack(string filename)
             //Grab each line from the CSV separated by the carriage return character
             getline(dataFile, currentCSVLine, '\r');
             //Exclude header row
-            if (rowCount != 0)
+            if (rowCount != 0 &&  rowCount <= 10)
             {
                 //Create a CrimeData instance from the line. Exclude a blank line (usually if opened separately)
                 if(currentCSVLine.length() != 0)
@@ -296,7 +296,7 @@ Queue<Music> FileController :: musicDataToQueue(string filename)
             //Grab each line from the CSV separated by the carriage return character
             getline(dataFile, currentCSVLine, '\r');
             //Exclude header row
-            if (rowCount != 0)
+            if (rowCount != 0 && rowCount <= 10)
             {
                 //Create a CrimeData instance from the line. Exclude a blank line (usually if opened separately)
                 if(currentCSVLine.length() != 0)
