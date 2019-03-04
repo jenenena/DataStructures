@@ -102,7 +102,7 @@ this->size -= 1;
 removedData = toBeRemoved->getData();
 delete toBeRemoved;
 return removedData;
-
+}
 template <class Type>
 bool LinkedList<Type> :: contains(Type thingToFind)
 {
@@ -111,7 +111,7 @@ bool LinkedList<Type> :: contains(Type thingToFind)
     LinearNode<Type> * searchPointer = front;
     for (int index = 0; index < this->size; index++)
     {
-        if (searchpointer->getData() == thingToFind)
+        if (searchPointer->getData() == thingToFind)
         {
             isInHere = true;
         }

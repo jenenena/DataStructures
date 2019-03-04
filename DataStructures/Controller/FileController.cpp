@@ -40,7 +40,7 @@ vector<CrimeData> FileController :: readCrimeDataToVector(string filename)
             }
         }
     }
-    
+}
     //CRIME DATA LINKED LIST
     
     LinkedList<CrimeData> FileController :: readDataToList(string filename)

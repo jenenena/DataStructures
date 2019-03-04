@@ -37,61 +37,61 @@ public:
     void setAtIndex(int index, Type data);
 };
 
-//constructor
-template <class Type>
-Array<Type> :: Array(int size)
-{
-    assert(size > 0);
-    this->size = size;
-    internalArray = new Type[size];
-}
-
-//copy constructor
-template <class Type>
-Array<Type :: Array(const Array<Type> & toCopy)
-{
-    this->size = toCopy.getSize();
-    //build data structure
-    internalArray = newType[size];
-    for(int index = 0; index < size; index++)
-    {
-        internalArray[index] = toCopy[index];
-    }
-}
-
-template <class Type>
-Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
-{
-    if (&toAssign != this)
-    {
-        if (size != toAssign.getSize())
-        {
-            delete [] internalArray;
-            size = toAssign.getSize();
-            internalArray = new Type [size];
-        }
-        
-        for (int index = 0; index < size; index++)
-        {
-            internalArray[index] = toAssign[index];
-        }
-    }
-    return *this;
-}
-
-template <class Type>
-Type & Array<Type> :: operator [] (int index)
-{
-    assert(index >= 0 && index < size);
-    return internalArray[index];
-}
-
-template <class Type>
-Type Array<Type> :: operator [] (int index) const
-{
-    assert (index >= 0 && index < size)
-    return internalArray[index];
-}
-    
+////constructor
+//template <class Type>
+//Array<Type> :: Array(int size)
+//{
+//    assert(size > 0);
+//    this->size = size;
+//    internalArray = new Type[size];
+//}
+//
+////copy constructor
+//template <class Type>
+//Array<Type :: Array(const Array<Type> & toCopy)
+//{
+//    this->size = toCopy.getSize();
+//    //build data structure
+//    internalArray = newType[size];
+//    for(int index = 0; index < size; index++)
+//    {
+//        internalArray[index] = toCopy[index];
+//    }
+//}
+//
+//template <class Type>
+//Array<Type> &  Array<Type> :: operator = (const Array<Type> & toAssign)
+//{
+//    if (&toAssign != this)
+//    {
+//        if (size != toAssign.getSize())
+//        {
+//            delete [] internalArray;
+//            size = toAssign.getSize();
+//            internalArray = new Type [size];
+//        }
+//        
+//        for (int index = 0; index < size; index++)
+//        {
+//            internalArray[index] = toAssign[index];
+//        }
+//    }
+//    return *this;
+//}
+//
+//template <class Type>
+//Type & Array<Type> :: operator [] (int index)
+//{
+//    assert(index >= 0 && index < size);
+//    return internalArray[index];
+//}
+//
+//template <class Type>
+//Type Array<Type> :: operator [] (int index) const
+//{
+//    assert (index >= 0 && index < size)
+//    return internalArray[index];
+//}
+//    
     
 #endif /* Array_hpp */
