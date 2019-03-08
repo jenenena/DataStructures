@@ -42,6 +42,7 @@
 		BE40CCBE2211D55000F80124 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
 		BE819FFD2201F8D80017CE8B /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 		BE81A0002202063B0017CE8B /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
+		BE82FAA42232BC8600103A7E /* Graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Graph.hpp; path = Nonlinear/Graph.hpp; sourceTree = "<group>"; };
 		BEB025C42209DE610047E0D6 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		BEB025C52209DE610047E0D6 /* Timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
 		BEB025C72209F0640047E0D6 /* FileController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileController.cpp; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 		BEB025C22209DD750047E0D6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				BEE8410521FF5D8400D56FAE /* Controller.cpp */,
 				BEB025C42209DE610047E0D6 /* Timer.cpp */,
 				BEB025C52209DE610047E0D6 /* Timer.hpp */,
 			);
@@ -150,6 +152,7 @@
 			children = (
 				BE819FFF2202062C0017CE8B /* Linear */,
 				BE819FFC2201F0E90017CE8B /* Nodes */,
+				BE82FAA42232BC8600103A7E /* Graph.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -158,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				BEB025C22209DD750047E0D6 /* Tools */,
-				BEE8410521FF5D8400D56FAE /* Controller.cpp */,
 				BEE8410621FF5D8400D56FAE /* Controller.hpp */,
 				BEB025C72209F0640047E0D6 /* FileController.cpp */,
 				BEB025C82209F0640047E0D6 /* FileController.hpp */,
