@@ -40,6 +40,7 @@ vector<CrimeData> FileController :: readCrimeDataToVector(string filename)
             }
         }
     }
+    return crimeVector;
 }
     //CRIME DATA LINKED LIST
     
@@ -67,7 +68,7 @@ vector<CrimeData> FileController :: readCrimeDataToVector(string filename)
                     if(currentCSVLine.length() != 0)
                     {
                         CrimeData row(currentCSVLine);
-                        crimed.add(row);
+                        crimes.add(row);
                     }
                 }
                 rowCount++;
@@ -166,7 +167,7 @@ vector<CrimeData> FileController :: readCrimeDataToVector(string filename)
     
     //MUSIC VECTOR
     
-    vector<Music> FileController :: readMusicDataToVector(string filename)
+vector<Music> FileController :: musicDataToVector(string filename)
     {
         std :: vector<Music> musicVector;
         string currentCSVLine;
@@ -194,6 +195,8 @@ vector<CrimeData> FileController :: readCrimeDataToVector(string filename)
                 }
             }
         }
+        return musicVector;
+  }
         
     //MUSIC LINKED LIST
         
@@ -234,7 +237,6 @@ LinkedList<Music> FileController :: musicDataToList(string filename)
     }
     return musicList;
     }
-}
 
 //MUSIC STACK
 
@@ -315,5 +317,3 @@ Queue<Music> FileController :: musicDataToQueue(string filename)
     }
     return musicList;
 }
-    
-};

@@ -128,3 +128,27 @@ void GraphTester :: setup()
     puzzle.addEdgeCost(19, 13, 21);
     
 }
+
+void GraphTester :: testGraphs()
+{
+    setup();
+    compareTraversals();
+    findCheapestTraversal();
+}
+
+void GraphTester :: compareTraversals() //THIS MIGHT STILL NEED WORK?
+{
+    for(int i = 0; i < puzzle.size(); i++)
+    {
+        puzzle.breadthFirstTraversal(puzzle, i);
+    }
+    for(int i = 0; i < puzzle.size(); i++)
+    {
+        puzzle.depthFirstTraversal(puzzle, i);
+    }
+}
+
+void GraphTester :: findCheapestTraversal()
+{
+    //STILL NEED TO DO THIS
+}

@@ -20,10 +20,10 @@ class Graph
 public:
     Graph();
     
-    void addVertes(const Type& value);
+    void addVertex(const Type& value);
     
     void addEdge(int source, int target);
-    void addEdgeUndireced(int source, int target);
+    void addEdgeUndirected(int source, int target);
     void addEdgeCost(int source, int target, int cost);
     
     void removeEdge(int source, int target);
@@ -41,6 +41,14 @@ public:
     void depthFirstTraversal(Graph<Type> & graph, int vertex);
     void breadthFirstTraversal(Graph<Type> & graph, int vertex);
     int costTraversal(Graph<Type> & graph, int vertex);
+    
+private:
+    static const int MAXIMUM = 50;
+    bool adjacencyMatrix [MAXIMUM][MAXIMUM];
+    int weightCostMatrix [MAXIMUM][MAXIMUM];
+    Type graphData[MAXIMUM];
+    int vertexCount;
+    void depthFirstTraversal(Graph<Type> & graph, int vertex, bool markedVertices[]);
 };
 
 template <class Type>
@@ -88,14 +96,14 @@ void Graph<Type> :: addVertex(const Type& value)
 }
 
 template <class Type>
-void Graph<Type :: addEdge(int source, int target)
+void Graph<Type> :: addEdge(int source, int target)
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target< vertexCount);
     adjacencyMatrix[source][target] = true;
 }
 
 template <class Type>
-void Graph<Type :: addEdgeCost(int source, int target, int cost)
+void Graph<Type> :: addEdgeCost(int source, int target, int cost)
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target< vertexCount);
     weightCostMatrix[source][target] = cost;
@@ -103,7 +111,7 @@ void Graph<Type :: addEdgeCost(int source, int target, int cost)
 }
 
 template <class Type>
-void Graph<Type :: addEdgeUndirected(int source, int target)
+void Graph<Type> :: addEdgeUndirected(int source, int target)
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target< vertexCount);
     adjacencyMatrix[source][target] = true;
@@ -111,14 +119,14 @@ void Graph<Type :: addEdgeUndirected(int source, int target)
 }
 
 template <class Type>
-void Graph<Type :: removeEdge(int source, int target)
+void Graph<Type> :: removeEdge(int source, int target)
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target< vertexCount);
     adjacencyMatrix[source][target] = false;
 }
 
 template <class Type>
-void Graph<Type :: removeEdgeUndirected(int source, int target)
+void Graph<Type> :: removeEdgeUndirected(int source, int target)
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target< vertexCount);
     adjacencyMatrix[source][target] = false;
@@ -126,7 +134,7 @@ void Graph<Type :: removeEdgeUndirected(int source, int target)
 }
 
 template <class Type>
-void Graph<Type :: removeEdgeCost(int source, int target)
+void Graph<Type> :: removeEdgeCost(int source, int target)
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target< vertexCount);
     weightCostMatrix[source][target] = 0;
@@ -252,7 +260,7 @@ int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int start)
         {
             if(!visited[*setIterator])
             {
-                cost += wightCostMatrix[currentIndex][*setIterator];
+                cost += weightCostMatrix[currentIndex][*setIterator];
                 visited[*setIterator] = true;
                 vertexQueue.push(*setIterator);
             }

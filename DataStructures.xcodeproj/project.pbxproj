@@ -11,6 +11,7 @@
 		BE0427472214823600EF1CC4 /* CrimeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE0427462214823600EF1CC4 /* CrimeData.cpp */; };
 		BE04274B2214826900EF1CC4 /* Music.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE04274A2214826800EF1CC4 /* Music.cpp */; };
 		BE57920B223FDCEA00544CD4 /* GraphTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE579209223FDCEA00544CD4 /* GraphTester.cpp */; };
+		BE57920D223FF46300544CD4 /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE57920C223FF46300544CD4 /* Runner.cpp */; };
 		BEB025C62209DE610047E0D6 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEB025C42209DE610047E0D6 /* Timer.cpp */; };
 		BEB025C92209F0640047E0D6 /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEB025C72209F0640047E0D6 /* FileController.cpp */; };
 		BEE8410721FF5D8400D56FAE /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEE8410521FF5D8400D56FAE /* Controller.cpp */; };
@@ -43,6 +44,7 @@
 		BE40CCBE2211D55000F80124 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
 		BE579209223FDCEA00544CD4 /* GraphTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphTester.cpp; sourceTree = "<group>"; };
 		BE57920A223FDCEA00544CD4 /* GraphTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GraphTester.hpp; sourceTree = "<group>"; };
+		BE57920C223FF46300544CD4 /* Runner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Runner.cpp; sourceTree = "<group>"; };
 		BE819FFD2201F8D80017CE8B /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 		BE81A0002202063B0017CE8B /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 		BE82FAA42232BC8600103A7E /* Graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Graph.hpp; path = Nonlinear/Graph.hpp; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				BEE8410621FF5D8400D56FAE /* Controller.hpp */,
 				BEB025C72209F0640047E0D6 /* FileController.cpp */,
 				BEB025C82209F0640047E0D6 /* FileController.hpp */,
+				BE57920C223FF46300544CD4 /* Runner.cpp */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				BEB025C62209DE610047E0D6 /* Timer.cpp in Sources */,
 				BE04274B2214826900EF1CC4 /* Music.cpp in Sources */,
 				BEB025C92209F0640047E0D6 /* FileController.cpp in Sources */,
+				BE57920D223FF46300544CD4 /* Runner.cpp in Sources */,
 				BE04274422147E8F00EF1CC4 /* LinearTester.cpp in Sources */,
 				BE57920B223FDCEA00544CD4 /* GraphTester.cpp in Sources */,
 			);

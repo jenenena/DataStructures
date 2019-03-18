@@ -50,7 +50,7 @@ void Stack<Type> :: push(Type data)
 {
     LinearNode<Type> * add = new LinearNode<Type>(data);
     
-    if(this->size = 0)
+    if((this->size = 0))
     {
         this->end = add;
     }
@@ -79,7 +79,7 @@ template <class Type>
 Type Stack<Type> :: pop()
 {
     assert (this->size > 0);
-    type removed = this->front->getData();
+    Type removed = this->front->getData();
     
     LinearNode<Type> * removedNode = this->getFront();
     this->front = removedNode->getNextNode();

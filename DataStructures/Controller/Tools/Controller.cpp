@@ -30,7 +30,7 @@ void Controller :: testLinear()
     lookieHere.testVsSTL();
 }
 
-void Controller :: testFiles();
+void Controller :: testFiles()
 {
-    coud << index << ": contents are: " << nameOfVector[index] << endl;
+   //cout << index << ": contents are: " << nameOfVector[index] << endl;
 }
