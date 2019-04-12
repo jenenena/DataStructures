@@ -33,6 +33,30 @@ protected:
     BinaryTreeNode<Type> * getLeftMostChild(BinaryTreeNode<Type> * current);
     
     void removeNode(BinaryTreeNode<Type> * removeMe);
+    
+public:
+    //MARK: public methods
+    BinarySearchTree();
+    ~BinarySearchTree();
+    
+    BinaryTreeNode<Type> * getRoot();
+    
+    void inOrderTransversal();
+    void preOrderTransversal();
+    void postOrderTransversal();
+    void demoTranversalSteps(BinaryTreeNode<Type> * node);
+    
+    int getSize();
+    int getHeight();
+    bool isComplete();
+    bool isBalanced();
+    
+    bool contains(Type value);
+    void insert(Type itemToInsert);
+    void remove(Type value);
+    
+    Type findMinimum();
+    Type findMaximum();
 }
 
 
