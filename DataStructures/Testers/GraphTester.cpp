@@ -136,7 +136,7 @@ void GraphTester :: testGraphs()
     findCheapestTraversal();
 }
 
-void GraphTester :: compareTraversals() //THIS MIGHT STILL NEED WORK?
+void GraphTester :: compareTraversals() //THIS MIGHT STILL NEED WORK? 
 {
     for(int i = 0; i < puzzle.size(); i++)
     {
