@@ -12,6 +12,7 @@
 		BE04274B2214826900EF1CC4 /* Music.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE04274A2214826800EF1CC4 /* Music.cpp */; };
 		BE57920B223FDCEA00544CD4 /* GraphTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE579209223FDCEA00544CD4 /* GraphTester.cpp */; };
 		BE57920D223FF46300544CD4 /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE57920C223FF46300544CD4 /* Runner.cpp */; };
+		BEA351432260E16200683FBF /* BinaryTreeTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEA351412260E16200683FBF /* BinaryTreeTester.cpp */; };
 		BEB025C62209DE610047E0D6 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEB025C42209DE610047E0D6 /* Timer.cpp */; };
 		BEB025C92209F0640047E0D6 /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEB025C72209F0640047E0D6 /* FileController.cpp */; };
 		BEE8410721FF5D8400D56FAE /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEE8410521FF5D8400D56FAE /* Controller.cpp */; };
@@ -49,6 +50,10 @@
 		BE81A0002202063B0017CE8B /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 		BE82FAA42232BC8600103A7E /* Graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Graph.hpp; path = Nonlinear/Graph.hpp; sourceTree = "<group>"; };
 		BEA351402260DA1600683FBF /* BinaryTreeNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryTreeNode.hpp; sourceTree = "<group>"; };
+		BEA351412260E16200683FBF /* BinaryTreeTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryTreeTester.cpp; sourceTree = "<group>"; };
+		BEA351422260E16200683FBF /* BinaryTreeTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryTreeTester.hpp; sourceTree = "<group>"; };
+		BEA351442260E35600683FBF /* Tree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tree.hpp; sourceTree = "<group>"; };
+		BEA351462260E53800683FBF /* BinarySearchTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinarySearchTree.hpp; sourceTree = "<group>"; };
 		BEB025C42209DE610047E0D6 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		BEB025C52209DE610047E0D6 /* Timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
 		BEB025C72209F0640047E0D6 /* FileController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileController.cpp; sourceTree = "<group>"; };
@@ -80,6 +85,8 @@
 				BE04274322147E8E00EF1CC4 /* LinearTester.hpp */,
 				BE579209223FDCEA00544CD4 /* GraphTester.cpp */,
 				BE57920A223FDCEA00544CD4 /* GraphTester.hpp */,
+				BEA351412260E16200683FBF /* BinaryTreeTester.cpp */,
+				BEA351422260E16200683FBF /* BinaryTreeTester.hpp */,
 			);
 			path = Testers;
 			sourceTree = "<group>";
@@ -106,6 +113,16 @@
 				BEBBC534221EF81000356334 /* CircularList.hpp */,
 			);
 			path = Linear;
+			sourceTree = "<group>";
+		};
+		BEA351452260E51700683FBF /* Nonlinear */ = {
+			isa = PBXGroup;
+			children = (
+				BEA351442260E35600683FBF /* Tree.hpp */,
+				BEA351462260E53800683FBF /* BinarySearchTree.hpp */,
+			);
+			name = Nonlinear;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		BEB025C22209DD750047E0D6 /* Tools */ = {
@@ -159,6 +176,7 @@
 		BEE840FF21FF5BE400D56FAE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BEA351452260E51700683FBF /* Nonlinear */,
 				BE819FFF2202062C0017CE8B /* Linear */,
 				BE819FFC2201F0E90017CE8B /* Nodes */,
 				BE82FAA42232BC8600103A7E /* Graph.hpp */,
@@ -255,6 +273,7 @@
 			files = (
 				BEE8410721FF5D8400D56FAE /* Controller.cpp in Sources */,
 				BE0427472214823600EF1CC4 /* CrimeData.cpp in Sources */,
+				BEA351432260E16200683FBF /* BinaryTreeTester.cpp in Sources */,
 				BEB025C62209DE610047E0D6 /* Timer.cpp in Sources */,
 				BE04274B2214826900EF1CC4 /* Music.cpp in Sources */,
 				BEB025C92209F0640047E0D6 /* FileController.cpp in Sources */,
