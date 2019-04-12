@@ -60,5 +60,67 @@ public:
 }
 
 
+//void methods from tree
+template <class Type>
+virtual void insert(Type data)
+{
+    
+}
+
+template <class Type>
+virtual void remove(Type data)
+{
+    
+}
+
+template <class Type>
+virtual void inOrderTraversal()
+{
+    
+}
+template <class Type>
+virtual void preOrderTraversal()
+{
+    
+}
+
+template <class Type>
+virtual void postOrderTraversal()
+{
+    
+}
+
+
+//informational methods from tree
+template <class Type>
+int BinarySearchTree<Type> :: getHeight()
+{
+    return -1;
+}
+
+template <class Type>
+int BinarySearchTree<Type> :: getSize()
+{
+    return -1;
+}
+
+template <class Type>
+virtual bool isComplete()
+{
+    return false;
+}
+
+template <class Type>
+virtual bool isBalanced()
+{
+    return false;
+}
+
+template <class Type>
+virtual bool contains()
+{
+    return false;
+}
+
 
 #endif /* BinarySearchTree_hpp */
