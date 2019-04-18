@@ -117,9 +117,39 @@ virtual bool isBalanced()
 }
 
 template <class Type>
-virtual bool contains()
+void BinarySearchTree<Type> :: inOrderTraversal()
 {
-    return false;
+    
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: preOrderTraversal()
+{
+    
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: postOrderTraversal()
+{
+    
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: insert(Type item)
+{
+    
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: contains(Type value)
+{
+    return  false;
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: remove(Type item)
+{
+    
 }
 
 
