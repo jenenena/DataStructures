@@ -76,7 +76,7 @@ virtual void remove(Type data)
 template <class Type>
 virtual void inOrderTraversal()
 {
-    
+    inOrderTraversal(this->root);
 }
 template <class Type>
 virtual void preOrderTraversal()
@@ -117,10 +117,16 @@ virtual bool isBalanced()
 }
 
 template <class Type>
-void BinarySearchTree<Type> :: inOrderTraversal()
+void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * currentNode)
 {
-    
+    if(currnetNode != nullptr)
+    {
+        inOrderTransversal(currentNode->getLeftChild());
+        cout << currentNode->getData() << endl;
+        inOrderTraversal(currentNode->getRightChild());
+    }
 }
+
 
 template <class Type>
 void BinarySearchTree<Type> :: preOrderTraversal()
@@ -128,15 +134,55 @@ void BinarySearchTree<Type> :: preOrderTraversal()
     
 }
 
+
 template <class Type>
 void BinarySearchTree<Type> :: postOrderTraversal()
 {
     
 }
 
+
 template <class Type>
-void BinarySearchTree<Type> :: insert(Type item)
+void BinarySearchTree<Type> :: insert(Type itemToInsert)
 {
+    BinaryTreeNode<Type> * insertMe = new BinaryTreeNode<Type>(itemToInsert);
+    BinaryTreeNode<Type> * previous = nullptr;
+    BinaryTreeNode<Type> * current = this->root;
+    
+    if(current == nullptr)
+    {
+        this->root = insertMe;
+    }
+    else
+    {
+        while(current != nullptr)
+        {
+            previous = current;
+            if(itemToInsert < current->getData())
+            {
+                current = current->getLeftChild();
+            }
+            else if(itemToInsert > current->getData())
+            {
+                current = current->getRightChild();
+            }
+            else
+            {
+                cerr << "Item is already present in the tree... Exiting insert :)" << endl;
+                delete insertMe;
+                return;
+            }
+        }
+        if (previous->getData() > itemToInsert)
+        {
+            previous->setLeftChild(insertMe)
+        }
+        else
+        {
+            previous->setRightChild(insertMe);
+        }
+        insertMe->setRootNode(previous);
+    }
     
 }
 

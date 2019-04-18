@@ -11,11 +11,15 @@
 
 #include <iostream>
 #include "../Model/Nodes/BinaryTreeNode.hpp"
+#include "../Model/Nonlinear/BinarySearchTree.hpp"
 
 class BinaryTreeTester
 {
+public:
+    void doTreeStuff();
 private:
     BinaryTreeNode<int> testNode;
+    BinarySearchNode<int> testTree;
 };
 
 #endif /* BinaryTreeTester_hpp */
