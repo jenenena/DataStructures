@@ -81,13 +81,13 @@ virtual void inOrderTraversal()
 template <class Type>
 virtual void preOrderTraversal()
 {
-    
+    preOrderTraversal(this->root);
 }
 
 template <class Type>
 virtual void postOrderTraversal()
 {
-    
+    postOrderTraversal(this->root);
 }
 
 
@@ -129,16 +129,26 @@ void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * currentNo
 
 
 template <class Type>
-void BinarySearchTree<Type> :: preOrderTraversal()
+void BinarySearchTree<Type> :: preOrderTraversal(BinaryTreeNode<Type> * currentNode)
 {
-    
+    if(currentNode != nullptr)
+    {
+        cout << currnetNode=>getData() << endl;
+        preOrderTraversal(currentNode->getLeftChild())
+        preOrderTraversal(currentNode->getRightChild());
+    }
 }
 
 
 template <class Type>
-void BinarySearchTree<Type> :: postOrderTraversal()
+void BinarySearchTree<Type> :: postOrderTraversal(BinaryTreeNode<Type> * currentNode)
 {
-    
+    if(currentNode != nullptr)
+    {
+        postOrderTraversal(currentNode->getLeftChild());
+        postOrderTraversal(currentNode->getRightChild());
+        cout << currentNode->getData() << endl;
+    }
 }
 
 
