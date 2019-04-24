@@ -7,8 +7,8 @@
 //
 
 #include "BinaryTreeTester.hpp"
-
-
+#include "/Users/jmil1416/Desktop/C++Workspace/DataStructures/DataStructures/Model/New Group/BinarySearchTree.hpp"
+#include "/Users/jmil1416/Desktop/C++Workspace/DataStructures/DataStructures/Model/Nodes/BinaryTreeNode.hpp"
 
 void BinaryTreeTester :: doTreeStuff()
 {
@@ -25,6 +25,10 @@ void BinaryTreeTester :: doTreeStuff()
     testTree.insert(101);
     
     testTree.inOrderTraversal();
-    testTree.preOrderTraversal()
-    testTree.postOrderTraversal()
+    testTree.preOrderTraversal();
+    testTree.postOrderTraversal();
+    
+    testTree.isBalanced();
+    testTree.isComplete();
+    testTree.getHeight();
 }

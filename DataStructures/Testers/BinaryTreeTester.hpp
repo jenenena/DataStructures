@@ -10,8 +10,8 @@
 #define BinaryTreeTester_hpp
 
 #include <iostream>
-#include "../Model/Nodes/BinaryTreeNode.hpp"
-#include "../Model/Nonlinear/BinarySearchTree.hpp"
+#include "/Users/jmil1416/Desktop/C++Workspace/DataStructures/DataStructures/Model/Nodes/BinaryTreeNode.hpp"
+#include "/Users/jmil1416/Desktop/C++Workspace/DataStructures/DataStructures/Model/New Group/BinarySearchTree.hpp"
 
 class BinaryTreeTester
 {
@@ -19,7 +19,7 @@ public:
     void doTreeStuff();
 private:
     BinaryTreeNode<int> testNode;
-    BinarySearchNode<int> testTree;
+    BinarySearchTree<int> testTree;
 };
 
 #endif /* BinaryTreeTester_hpp */

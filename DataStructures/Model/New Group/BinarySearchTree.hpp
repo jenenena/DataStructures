@@ -23,16 +23,15 @@ protected:
     bool isBalanced(BinaryTreeNode<Type> * startNode);
     bool isComplete(BinaryTreeNode<Type> * startNode, int index, int size);
     
-    void inOrderTransversal(BinaryTreeNode<Type> * inStart);
-    void preOrderTransversal(BinaryTreeNode<Type> * preStart);
-    void postOrderTransversal(BinaryTreeNode<Type> * postStart);
-    
-    void destroyTree(BinaryTreeNode<Type> * node);
+    void inOrderTraversal(BinaryTreeNode<Type> * inStart);
+    void preOrderTraversal(BinaryTreeNode<Type> * preStart);
+    void postOrderTraversal(BinaryTreeNode<Type> * postStart);
     
     BinaryTreeNode<Type> * getRightMostChild(BinaryTreeNode<Type> * current);
     BinaryTreeNode<Type> * getLeftMostChild(BinaryTreeNode<Type> * current);
     
     void removeNode(BinaryTreeNode<Type> * removeMe);
+    void destroyTree(BinaryTreeNode<Type> * node);
     
 public:
     //MARK: public methods
@@ -41,10 +40,10 @@ public:
     
     BinaryTreeNode<Type> * getRoot();
     
-    void inOrderTransversal();
-    void preOrderTransversal();
-    void postOrderTransversal();
-    void demoTranversalSteps(BinaryTreeNode<Type> * node);
+    void inOrderTraversal();
+    void preOrderTraversal();
+    void postOrderTraversal();
+    void demoTraversalSteps(BinaryTreeNode<Type> * node);
     
     int getSize();
     int getHeight();
@@ -57,36 +56,36 @@ public:
     
     Type findMinimum();
     Type findMaximum();
-}
+};
 
 
 //void methods from tree
-template <class Type>
-virtual void insert(Type data)
-{
-    
-}
+//template <class Type>
+//virtual void insert(Type data)
+//{
+//
+//}
+//
+//template <class Type>
+//virtual void remove(Type data)
+//{
+//
+//}
 
+ //Public Implementation of Traversals (each has one line that calls the Protected Implementation method)
 template <class Type>
-virtual void remove(Type data)
-{
-    
-}
-
-// Public Implementation of Traversals (each has one line that calls the Protected Implementation method)
-template <class Type>
-virtual void inOrderTraversal()
+void BinarySearchTree<Type> :: inOrderTraversal()
 {
     inOrderTraversal(this->root);
 }
 template <class Type>
-virtual void preOrderTraversal()
+void BinarySearchTree<Type> :: preOrderTraversal()
 {
     preOrderTraversal(this->root);
 }
 
 template <class Type>
-virtual void postOrderTraversal()
+void BinarySearchTree<Type> :: postOrderTraversal()
 {
     postOrderTraversal(this->root);
 }
@@ -105,26 +104,68 @@ int BinarySearchTree<Type> :: getSize()
     return -1;
 }
 
+//-------------isComplete!
+
 template <class Type>
-virtual bool isComplete()
+bool BinarySearchTree<Type> :: isComplete()
 {
-    return false;
+    int index = 0;
+    int size = getSize();
+    return isComplete(this->root, index, size);
 }
 
 template <class Type>
-virtual bool isBalanced()
+bool BinarySearchTree<Type> :: isComplete(BinaryTreeNode<Type> * startNode, int index, int size)
 {
+    if(startNode == nullptr)
+    {
+        return true;
+    }
+    if(index >= size)
+    {
+        return false;
+    }
+    return(isComplete(startNode->getLeftChild(), 2 * index +1, size) && isComplete(startNode->getRightChild(), 2 * index + 2, size));
+}
+
+//--------------isBalanced!
+
+template <class Type>
+bool BinarySearchTree<Type> :: isBalanced()
+{
+    return isBalanced(this->root);
+}
+
+template <class Type>
+bool BinarySearchTree<Type> :: isBalanced(BinaryTreeNode<Type> * current)
+{
+    int leftHeight = 0;
+    int rightHeight = 0;
+    if(current == nullptr)
+    {
+        return true;
+    }
+    leftHeight = calculateHeight(current->getLeftChild());
+    rightHeight = calculateHeight(current->getRightChild());
+    int heightDifference = abs(leftHeight - rightHeight);
+    bool leftBalanced = isBalanced(current->getLeftChild());
+    bool rightBalanced = isBalanced(current->getRightChild());
+    if(heightDifference <= 1 && leftBalanced && rightBalanced)
+    {
+        return true;
+    }
     return false;
 }
+
 
 //Protected Implementation of Traversals
 //In-Order: Left, Root, Right
 template <class Type>
 void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * currentNode)
 {
-    if(currnetNode != nullptr)
+    if(currentNode != nullptr)
     {
-        inOrderTransversal(currentNode->getLeftChild());
+        inOrderTraversal(currentNode->getLeftChild());
         cout << currentNode->getData() << endl;
         inOrderTraversal(currentNode->getRightChild());
     }
@@ -135,8 +176,8 @@ void BinarySearchTree<Type> :: preOrderTraversal(BinaryTreeNode<Type> * currentN
 {
     if(currentNode != nullptr)
     {
-        cout << currnetNode=>getData() << endl;
-        preOrderTraversal(currentNode->getLeftChild())
+        cout << currentNode->getData() << endl;
+        preOrderTraversal(currentNode->getLeftChild());
         preOrderTraversal(currentNode->getRightChild());
     }
 }
@@ -187,28 +228,28 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
         }
         if (previous->getData() > itemToInsert)
         {
-            previous->setLeftChild(insertMe)
+            previous->setLeftChild(insertMe);
         }
         else
         {
             previous->setRightChild(insertMe);
         }
-        insertMe->setRootNode(previous);
+        insertMe->setRoot(previous);
     }
     
 }
 
-template <class Type>
-void BinarySearchTree<Type> :: contains(Type value)
-{
-//    return  false;
-}
+//template <class Type>
+//void BinarySearchTree<Type> :: contains(Type value)
+//{
+////    return  false;
+//}
 
-template <class Type>
-void BinarySearchTree<Type> :: remove(Type item)
-{
-    
-}
+//template <class Type>
+//void BinarySearchTree<Type> :: remove(Type item)
+//{
+//
+//}
 
 //////////////////// TREE DATA OPERATIONS
 
@@ -309,7 +350,7 @@ void BinarySearchTree<Type> :: removeNode(BinaryTreeNode<Type> * removeMe)
     previous = removeMe->getRootNode();
     
     //Node is a leaf and has no children
-    if(removeMe->getRightNode() == nullptr && removeMe->getData() < revious->getData())
+    if(removeMe->getRightNode() == nullptr && removeMe->getData() < previous->getData())
     {
         temp = removeMe;
         removeMe = nullptr;
@@ -385,7 +426,7 @@ void BinarySearchTree<Type> :: removeNode(BinaryTreeNode<Type> * removeMe)
 
 //GetLeftMostChild - finds the smallest value below a given point
 template <class Type>
-BinaryTreeNode<Type> * BinarySearchTreee<Type> :: getLeftMostChild(BinaryTreeNode<Type> * startingNode)
+BinaryTreeNode<Type> * BinarySearchTree<Type> :: getLeftMostChild(BinaryTreeNode<Type> * startingNode)
 {
     BinaryTreeNode<Type> * currentNode = startingNode;
     BinaryTreeNode<Type> * previous = nullptr;
@@ -427,6 +468,24 @@ Type BinarySearchTree<Type> :: findMinimum()
     return getLeftMostChild(this->root)->getData();
 }
 
+
+// DESTROY the TREE
+template <class Type>
+BinarySearchTree<Type> :: ~BinarySearchTree()
+{
+    destroyTree(this->root);
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: destroyTree(BinaryTreeNode<Type> * node)
+{
+    if(node != nullptr)
+    {
+        destroyTree(node->getLeftNode());
+        destroyTree(node->getRightNode());
+        delete node;
+    }
+}
 
 
 
